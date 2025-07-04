@@ -52,3 +52,17 @@ While VADER provides quick insights, it has limitations in detecting sarcasm, su
 4. Run Development Server
     npm run dev
 5. Open http://localhost:3000 to view it in the browser.
+
+## Future Plans
+Upgrade to transformer-based NLP models for improved context and sarcasm detection
+
+Expand support for additional platforms (e.g., Twitter, Reddit)
+
+Add user themes and dark mode
+
+## Acknowledgements
+VADER Sentiment Analysis - https://github.com/cjhutto/vaderSentiment
+
+Google YouTube Data API - https://developers.google.com/youtube/v3
+
+Deployed on Vercel - https://vercel.com
