@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Pulse
 
-## Getting Started
+Pulse is a modern sentiment analysis app that uncovers how audiences really feel about YouTube videos. It allows users to "check the pulse" of trending videos, search topics, or analyze any specific YouTube URL.
 
-First, run the development server:
+This project was inspired by YouTube’s removal of public dislike counts in 2021, which reduced transparency into audience reactions. Pulse restores visibility by analyzing comments and surfacing emotional tone: positive, neutral, or negative.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Why Pulse?
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+In November 2021, YouTube removed public dislike counts to promote respectful interactions. However, this change made it harder for viewers and creators to gauge audience sentiment. Pulse brings back transparency by analyzing YouTube comments with VADER, a lightweight rule-based sentiment analysis tool.  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+While VADER provides quick insights, it has limitations in detecting sarcasm, subtlety, and nuanced context. Future versions of Pulse aim to integrate advanced NLP models for richer, more accurate sentiment analysis.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- View trending YouTube videos by category (Music, Gaming, News, Sports, Film)
+- Search any topic and analyze results
+- Paste any YouTube URL to analyze audience sentiment
+- Visualize sentiment breakdown with interactive pie and bar charts
+- Pastel-themed responsive user interface
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Live Demo
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[https://pulse-app-one.vercel.app](https://pulse-app-one.vercel.app)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Tech Stack
+
+- Frontend: Next.js 13 (App Router), Tailwind CSS
+- Backend: Next.js API Routes, Google YouTube Data API v3
+- Sentiment Analysis: VADER Sentiment
+- Deployment: Vercel
+
+---
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/cvhuynh1777/PulseApp.git
+   cd PulseApp
+2. Install dependencies
+    npm install
+3. Create a .env.local file in the toor directory and add API key
+    YOUTUBE_API_KEY=your-youtube-api-key-here
+4. Run Development Server
+    npm run dev
+5. Open http://localhost:3000 to view it in the browser.
