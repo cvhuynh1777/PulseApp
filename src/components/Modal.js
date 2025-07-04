@@ -11,9 +11,9 @@ export default function Modal({ title, onClose, children }) {
       ></div>
 
       {/* Modal Content */}
-      <div className="relative bg-white text-gray-800 p-6 rounded-lg shadow-xl max-w-3xl w-full z-50">
-        {/* Header */}
-        <div className="flex justify-between items-center mb-4">
+      <div className="relative bg-white text-gray-800 p-6 rounded-lg shadow-xl max-w-3xl w-full z-50 flex flex-col max-h-[80vh]">
+        {/* Header (fixed at top of modal) */}
+        <div className="flex justify-between items-center mb-4 shrink-0">
           <h2 className="text-xl font-bold text-pink-400">Analysis: {title}</h2>
           <button
             onClick={onClose}
@@ -22,7 +22,11 @@ export default function Modal({ title, onClose, children }) {
             ✖
           </button>
         </div>
-        {children}
+
+        {/* Scrollable Body */}
+        <div className="overflow-y-auto">
+          {children}
+        </div>
       </div>
     </div>
   );
